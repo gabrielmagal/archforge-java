@@ -4,7 +4,6 @@ import br.com.archforge_java.notes.ILabel;
 import br.com.archforge_java.notes.IPhoto;
 import br.com.archforge_java.notes.IShowInForm;
 import br.com.archforge_java.notes.IShowInTable;
-import core.notes.*;
 import br.com.archforge_java.repository.model.enums.UserType;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;

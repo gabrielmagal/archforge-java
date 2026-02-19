@@ -1,7 +1,7 @@
 package br.com.archforge_java.repository.model;
 
-import br.com.mindhaven.domain.entity.enums.UserType;
-import br.com.mindhaven.infrastructure.interceptor.AuditListener;
+import br.com.archforge_java.infrastructure.interceptor.AuditListener;
+import br.com.archforge_java.repository.model.enums.UserType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import lombok.*;

@@ -5,7 +5,7 @@ import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class UserServiceImpl extends AbstractCrudService<UserEntity> {
-    public UserServiceImpl(Class<UserEntity> entityClass) {
-        super(entityClass);
+    public UserServiceImpl() {
+        super(UserEntity.class);
     }
 }

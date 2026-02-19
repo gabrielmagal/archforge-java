@@ -1,7 +1,6 @@
 package br.com.archforge_java.service;
 
 import br.com.archforge_java.notes.*;
-import core.notes.*;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

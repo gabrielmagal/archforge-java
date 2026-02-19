@@ -5,7 +5,7 @@ import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class AuditLogServiceImpl extends AbstractCrudService<AuditLogEntity> {
-    public AuditLogServiceImpl(Class<AuditLogEntity> entityClass) {
-        super(entityClass);
+    public AuditLogServiceImpl() {
+        super(AuditLogEntity.class);
     }
 }
