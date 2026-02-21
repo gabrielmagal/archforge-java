@@ -8,7 +8,7 @@ import javax.management.relation.InvalidRoleValueException;
 import java.util.List;
 import java.util.UUID;
 
-public interface ICrudService<T extends BaseEntity> {
+public interface ICrudWithUserService<T extends BaseEntity> {
     T findById(UUID id);
     List<T> findAll();
     T save(T entity);

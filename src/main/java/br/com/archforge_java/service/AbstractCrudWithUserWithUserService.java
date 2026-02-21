@@ -1,7 +1,7 @@
 package br.com.archforge_java.service;
 
 import br.com.archforge_java.repository.model.UserEntity;
-import br.com.archforge_java.service.interfaces.ICrudService;
+import br.com.archforge_java.service.interfaces.ICrudWithUserService;
 import br.com.archforge_java.service.interfaces.KeycloakService;
 import br.com.archforge_java.service.model.Filter;
 import br.com.archforge_java.repository.dao.interfaces.IGenericDao;
@@ -12,12 +12,11 @@ import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.HttpHeaders;
 import jakarta.ws.rs.core.SecurityContext;
 
-import javax.management.relation.InvalidRoleValueException;
 import java.util.List;
 import java.util.UUID;
 
 @Transactional
-public abstract class AbstractCrudService<T extends BaseEntity> extends AbstractEntityDescriptionService implements ICrudService<T> {
+public abstract class AbstractCrudWithUserWithUserService<T extends BaseEntity> extends AbstractEntityDescriptionService implements ICrudWithUserService<T> {
     @Inject
     protected IGenericDao dao;
 
@@ -32,7 +31,7 @@ public abstract class AbstractCrudService<T extends BaseEntity> extends Abstract
 
     protected final Class<T> entityClass;
 
-    public AbstractCrudService(Class<T> entityClass) {
+    public AbstractCrudWithUserWithUserService(Class<T> entityClass) {
         this.entityClass = entityClass;
     }
 
@@ -74,7 +73,7 @@ public abstract class AbstractCrudService<T extends BaseEntity> extends Abstract
     }
 
     @Override
-    public List<T> filteredFindPaged(Filter filter, int page, int size) throws InvalidRoleValueException {
+    public List<T> filteredFindPaged(Filter filter, int page, int size) {
         return dao.filteredFindPaged(getTenant(), filter, page, size, entityClass);
     }
 

@@ -4,8 +4,8 @@ import br.com.archforge_java.repository.model.UserEntity;
 import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
-public class UserServiceImpl extends AbstractCrudService<UserEntity> {
-    public UserServiceImpl() {
+public class UserWithUserWithUserServiceImpl extends AbstractCrudWithUserWithUserService<UserEntity> {
+    public UserWithUserWithUserServiceImpl() {
         super(UserEntity.class);
     }
 }
