@@ -13,7 +13,6 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Entity
 @Table(name = "user_info")
-@Builder
 @EntityListeners(AuditListener.class)
 public class UserEntity extends BaseEntity {
 
